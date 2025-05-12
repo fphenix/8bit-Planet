@@ -13,7 +13,9 @@ class PixCell {
   int w;
   int h;
   
-  PixCell (int _x, int _y, int _w, int _h, color _c, int _origx, int _origy) {
+  boolean border;
+  
+  PixCell (int _x, int _y, int _w, int _h, color _c, int _origx, int _origy, boolean _border) {
     this.x = _x;
     this.y = _y;
     this.w = _w;
@@ -21,9 +23,9 @@ class PixCell {
     this.c = _c;
     this.origx = _origx;
     this.origy = _origy;
+    this.border = _border;
     
     this.calcScreenCoords();
-    
   }
   
   color getColor() {
@@ -41,6 +43,11 @@ class PixCell {
   
   public void show () {
     rectMode(CENTER);
+    if (!this.border) {
+      noStroke();
+    } else {
+      stroke(0);
+    }
     fill(this.c);
     rect(this.screenx, this.screeny, this.w, this.h);
   }

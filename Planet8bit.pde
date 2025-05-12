@@ -59,7 +59,7 @@ void showMercator () {
     for (int i = 2*mercatorXmin; i <= 2*mercatorXmax; i++) {
       int idxx = i+(mercatorXmax*2);
       int idxy = j+mercatorYmax;
-      mercator[idxx][idxy] = new PixCell(i, j, 10, 10, pickColor(i, j), int(3.0 * width/5.0+40.0), int(height/2.0));
+      mercator[idxx][idxy] = new PixCell(i, j, 10, 10, pickColor(i, j), int(3.0 * width/5.0+40.0), int(height/2.0), true);
       mercator[idxx][idxy].show();
     }
   }
@@ -96,7 +96,7 @@ void showPlanet (int xoff) {
       } else {
         c = color(0, 0, 0, 255);
       }
-      planet[idxx][idxy] = new PixCell(i, j, 10, 10, c, int(width/5.0), int(height/2.0));
+      planet[idxx][idxy] = new PixCell(i, j, 10, 10, c, int(width/5.0), int(height/2.0), false);
       planet[idxx][idxy].show();
     }
   }
