@@ -1,4 +1,4 @@
 # 8bit-Planet
-Generates a planet 8bit style like in the game Captain Blood
+Generates an animated planet 8bit-style like in the game Captain Blood
 
-Runs in Processing 4.1.2 (java)
+Planet8bit.pde runs in Processing 4.1.2 (java)
